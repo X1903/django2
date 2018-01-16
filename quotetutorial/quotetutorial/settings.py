@@ -65,7 +65,8 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'quotetutorial.pipelines.QuotetutorialPipeline': 300,
+   'quotetutorial.pipelines.TextPipeline': 300,
+   'quotetutorial.pipelines.MongoPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -88,3 +89,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# 数据库变量
+MONGO_URI = '127.0.0.1'
+MONGO_DB = 'quotestutorial'
