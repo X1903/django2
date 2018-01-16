@@ -41,6 +41,7 @@ class Handler(BaseHandler):
     def on_result(self, result):
         if result:
             self.save_to_mongo(result)
+            
 
     def save_to_mongo(self, result):
         if self.db['Hong_Kong'].insert(result):
